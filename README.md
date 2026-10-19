@@ -32,9 +32,11 @@ If the OpenAI service is unavailable and no saved analysis is available, the app
 | Interface | HTML, CSS and JavaScript |
 | Application server | Python / Flask, served by Gunicorn |
 | Data storage | SQLite |
-| Critique analysis | OpenAI API |
+| AI-assisted critique analysis | OpenAI API |
+| Text-overlap analysis | Python (phrase comparison and Jaccard similarity) |
 | Hosting and persistent database volume | Railway |
-| Source control and automatic deployments | GitHub |
+| Source control | GitHub |
+| Automated deployments | Railway (triggered by GitHub pushes) |
 | Domain and DNS | Cloudflare |
 
 **Core flow:** Student submission and transcript → Flask validation and storage → AI critique and text-overlap checks → evidence presented to the marker → marker decisions and PDF export.
