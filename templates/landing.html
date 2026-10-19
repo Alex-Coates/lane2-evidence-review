@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block body %}
+<main class="auth-wrap wide">
+  <div class="eyebrow">INFOMGMT 399 / Lane 2 assessment</div>
+  <h1>Lane 2 Evidence Review</h1>
+  <div class="role-grid">
+    <section class="panel">
+      <h2>Student</h2>
+      <a class="primary" href="{{ url_for('student_login') }}">Student sign in</a>
+    </section>
+    <section class="panel">
+      <h2>Marker</h2>
+      <a class="primary" href="{{ url_for('marker_login') }}">Marker sign in</a>
+    </section>
+  </div>
+</main>
+{% endblock %}

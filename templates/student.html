@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block title %}Submit your work · Lane 2 Evidence Review{% endblock %}
+{% block body %}
+<header>
+  <span class="crumb">INFOMGMT 399 <span class="sep">/</span> Lane 2 assessment</span>
+  <span class="who">
+    <span class="avatar">{{ user.username[0]|upper }}</span> {{ user.username }}
+    <form method="post" action="{{ url_for('logout') }}"><button class="linkbtn" type="submit">Sign out</button></form>
+  </span>
+</header>
+<div class="strip">Student Submission</div>
+<main class="page-main">
+  <div class="eyebrow">STUDENT WORKSPACE</div>
+  <h1>Submit your work</h1>
+
+  <div id="received" class="success" hidden role="status"></div>
+
+  <section class="panel">
+    <form id="submit-form" novalidate>
+      <div class="form-field"><label for="topic">Topic</label><input id="topic" type="text" maxlength="100" required></div>
+
+      <div class="form-field">
+        <label for="final-text">Final submission</label>
+        <textarea id="final-text" maxlength="20000" required></textarea>
+        <div class="file-row"><label for="final-file">Or load from a .txt file:</label><input id="final-file" type="file" accept=".txt,text/plain"></div>
+      </div>
+
+      <div class="form-field">
+        <label for="transcript">AI interaction history</label>
+        <textarea id="transcript" maxlength="30000" placeholder="Student: Explain the topic.&#10;AI: Here is a response.&#10;Student: What evidence supports that claim?"></textarea>
+        <div class="file-row"><label for="transcript-file">Or load from a .txt file:</label><input id="transcript-file" type="file" accept=".txt,text/plain"></div>
+        <p class="definition" style="margin-top:8px">Start each turn with Student: or AI:, and alternate between them.</p>
+        <label class="check"><input id="no-transcript" type="checkbox"> I have no AI interaction history to supply.</label>
+      </div>
+
+      <button class="primary" type="submit" id="submit-btn">Submit work</button>
+      <p id="submit-error" class="form-error" role="alert"></p>
+    </form>
+  </section>
+
+  <section class="panel flush">
+    <div class="toolbar"><h2 style="margin:0">Your submissions</h2></div>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Reference</th><th>Topic</th><th>Submitted</th><th>Status</th><th>AI history</th></tr></thead>
+      <tbody id="my-rows"><tr><td colspan="5" class="empty">Loading…</td></tr></tbody>
+    </table></div>
+  </section>
+</main>
+
+<dialog id="modal"><div id="modal-body"></div></dialog>
+{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', filename='student.js') }}"></script>{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Lane 2 Evidence Review{% endblock %}
+{% block body %}
+<aside>
+  <div class="brand">L2 / Evidence Review</div>
+  <div class="side-label strong">LANE 2 ASSESSMENT</div>
+  <div class="side-label">WORKSPACE</div>
+  <nav aria-label="Main">
+    <button data-view="queue" class="nav active">Review queue</button>
+    <button data-view="method" class="nav">Analysis method</button>
+    <button data-view="guide" class="nav">Walkthrough guide</button>
+  </nav>
+</aside>
+<div class="app">
+  <header>
+    <span class="crumb">INFOMGMT 399 <span class="sep">/</span> Lane 2 assessment</span>
+    <span class="who">
+      <span class="avatar">{{ user.username[0]|upper }}</span> {{ user.username }}
+      <form method="post" action="{{ url_for('logout') }}"><button class="linkbtn" type="submit">Sign out</button></form>
+    </span>
+  </header>
+  <div class="strip" id="strip">Student Submission Data</div>
+  <main id="main"><p class="muted">Loading…</p></main>
+</div>
+<dialog id="modal"><div id="modal-body"></div></dialog>
+{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', filename='marker.js') }}"></script>{% endblock %}

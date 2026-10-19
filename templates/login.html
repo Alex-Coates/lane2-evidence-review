@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}{{ role|capitalize }} sign in · Lane 2 Evidence Review{% endblock %}
+{% block body %}
+<main class="auth-wrap">
+  <div class="eyebrow">{{ role|upper }} SIGN IN</div>
+  <h1>Sign in</h1>
+  <section class="panel">
+    <form method="post" novalidate>
+      <div class="form-field">
+        <label for="username">Username</label>
+        <input id="username" name="username" type="text" autocomplete="username" required autofocus>
+      </div>
+      <div class="form-field">
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" autocomplete="current-password" required>
+      </div>
+      <button class="primary" type="submit">Sign in</button>
+      {% if error %}<p class="form-error" role="alert">{{ error }}</p>{% endif %}
+    </form>
+  </section>
+  <p class="definition"><a href="{{ url_for('landing') }}">← Back</a></p>
+</main>
+{% endblock %}

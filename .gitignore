@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Local database and secrets
+instance/*
+!instance/.gitkeep
+.env
+.env.*
+*.db
+*.db-journal
+
+# Temporary files
+*.log
