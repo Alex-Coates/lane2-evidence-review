@@ -1,12 +1,4 @@
 """Labelled student replies for comparing the rule-based flags with the OpenAI critique check.
-
-IMPORTANT FOR THE TEAM: these labels are a DRAFT written by the AI tool. The team must read
-them, correct any label it disagrees with, and treat its own labels as the ground truth. Each
-item is (AI answer, student reply, label, note). Labels:
-    S  substantive       engages with specific content of the AI answer
-    G  generic           keeps the conversation going without evaluating the answer
-    B  blind acceptance  accepts, thanks or approves without evaluating
-All text is fictional.
 """
 
 AI_SOLAR = "Every school should install a battery because batteries always make solar power more economical."
