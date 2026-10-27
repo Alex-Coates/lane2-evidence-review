@@ -11,7 +11,7 @@ SEED_VERSION = "2.4"
 
 SEED_USERS = [
     # (username, password, role, display name)
-    ("Ruhi", None, "marker", "Ruhi"),
+    ("marker1", None, "marker", "Marker One"),,
     ("aiye355", "student-pass-1", "student", "aiye355"),
     ("hluo185", "student-pass-2", "student", "hluo185"),
     ("acoa536", "student-pass-3", "student", "acoa536"),
