@@ -1,7 +1,7 @@
 # Lane 2 Evidence Review
 
 **INFOMGMT 399 · Group 9 — Team HAHA**  
-**Live application:** https://lane2review.com
+**Live application:** [https://lane2review.com](https://lane2review.com)
 
 Lane 2 Evidence Review is a web application that helps university markers examine how students engaged with generative AI during assessments. It brings together a student's final submission, AI interaction transcript and review cues so that markers can inspect evidence in context and record their own decisions.
 
@@ -9,7 +9,7 @@ Lane 2 Evidence Review is a web application that helps university markers examin
 
 ## Access the application
 
-Open **https://lane2review.com** in a browser. No installation is required for the hosted demonstration.
+Open [**https://lane2review.com**](https://lane2review.com) in a browser. No installation is required for the hosted demonstration.
 
 - **Student interface:** Submit written work and an AI interaction transcript.
 - **Marker interface:** Browse submissions, inspect review cues and original context, record decisions and notes, and export a PDF review report.
@@ -27,7 +27,7 @@ If the OpenAI service is unavailable and no saved analysis is available, the app
 
 ## Technical overview
 
-| Component | Technology |
+| **Component** | **Technology** |
 | --- | --- |
 | Interface | HTML, CSS and JavaScript |
 | Application server | Python / Flask, served by Gunicorn |
@@ -48,17 +48,25 @@ The hosted database is stored on a persistent Railway volume, separate from any 
 Local setup is optional for users of the hosted website but is provided for source-code assessment and development.
 
 1. Install Python 3.9 or newer.
-2. Clone this repository or extract the submitted source-code ZIP.
-3. Open a terminal in the folder containing `app.py` and run:
+2. Clone this repository.
+3. Open a terminal in the folder containing `app.py`.
+4. Install the required dependencies:
 
-   ```bash
-   python -m pip install -r requirements.txt
-   python app.py
-   ```
+```bash
+python -m pip install -r requirements.txt
+```
 
-4. Visit **http://127.0.0.1:5000** (or the address printed in the terminal).
+5. Start the application:
 
-On Windows, `py` may be used in place of `python`. A fresh local database is populated with fictional seed data. **The seeded marker account does not have a usable default password**; contact the project team for a configured demonstration account or local setup assistance.
+```bash
+python app.py
+```
+
+6. Visit [**http://127.0.0.1:5000**](http://127.0.0.1:5000) or the address printed in the terminal.
+
+On Windows, `py` may be used in place of `python`.
+
+A fresh local database is populated with fictional seed data. **The seeded marker account does not have a usable default password**; contact the project team for a configured demonstration account or local setup assistance.
 
 ### Optional live OpenAI checks
 
@@ -86,7 +94,7 @@ Run the automated tests locally:
 python -m unittest discover -s tests -v
 ```
 
-The accompanying technical demonstration video explains the end-to-end workflow, processing logic, test scenarios, outcomes and known limitations.
+The technical demonstration video covers the end-to-end workflow, processing logic, test scenarios, outcomes and known limitations.
 
 ## Limitations and responsible use
 
